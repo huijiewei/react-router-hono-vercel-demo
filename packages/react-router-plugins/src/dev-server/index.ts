@@ -1,5 +1,5 @@
 import { join } from "node:path";
-import honoDevServer from "@hono/vite-dev-server";
+import { honoDevServer } from "./dev-server";
 
 type HonoDevServerOptions = {
   appDirectory?: string;
@@ -19,7 +19,6 @@ export const devServer = (config?: HonoDevServerOptions) => {
   const mergedConfig = { ...defaultConfig, ...config };
 
   return honoDevServer({
-    injectClientScript: false,
     entry: join(mergedConfig.appDirectory, mergedConfig.entryFile),
     export: mergedConfig.exportName,
     exclude: [

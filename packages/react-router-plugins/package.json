@@ -39,7 +39,6 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
-    "@hono/vite-dev-server": "^0.17.0",
     "@react-router/dev": "pre",
     "@vercel/nft": "^0.27.6",
     "esbuild": "^0.21.5",

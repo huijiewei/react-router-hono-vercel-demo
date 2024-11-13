@@ -9,6 +9,8 @@ import type { BlankEnv } from "hono/types";
 import type { ServerBuild } from "react-router";
 import { type HonoServerOptions, createHonoServer } from "../base/hono-server";
 
+export type { HonoServerOptions };
+
 export type HonoNodeServerOptions<E extends Env = BlankEnv> = HonoServerOptions<E> & {
   port?: number;
   defaultLogger?: boolean;

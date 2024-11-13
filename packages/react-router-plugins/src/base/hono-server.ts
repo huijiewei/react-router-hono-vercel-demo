@@ -51,7 +51,7 @@ export const createHonoServer = async <E extends Env = BlankEnv>(
           return {};
         }
 
-        return options.getLoadContext(c, { build });
+        return options.getLoadContext(c, { build, mode });
       },
     })(c, next);
   });
