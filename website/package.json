@@ -1,0 +1,34 @@
+{
+  "name": "website",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "biome check --write .",
+    "typegen": "react-router typegen",
+    "dev": "vite",
+    "build": "NODE_ENV=production react-router build",
+    "vercel": "NODE_ENV=production VERCEL=1 react-router build",
+    "start": "NODE_ENV=production node ./build/server/server.mjs"
+  },
+  "dependencies": {
+    "@react-router/node": "pre",
+    "isbot": "^5.1.17",
+    "react": "19.0.0-rc-2ec26bc4-20241111",
+    "react-dom": "19.0.0-rc-2ec26bc4-20241111",
+    "react-router": "pre",
+    "tailwindcss": "next"
+  },
+  "devDependencies": {
+    "@react-router/dev": "pre",
+    "@tailwindcss/vite": "next",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "react-router-plugins": "workspace:^",
+    "vite": "^5.4.11",
+    "vite-plugin-inspect": "^0.8.7",
+    "vite-tsconfig-paths": "^5.1.2"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}

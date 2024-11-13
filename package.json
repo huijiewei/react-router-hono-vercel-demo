@@ -1,0 +1,40 @@
+{
+  "name": "react-router-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "lefthook install",
+    "check": "pnpm run -r --if-present check",
+    "website:dev": "pnpm --filter website run dev",
+    "website:build": "pnpm --filter website... run build",
+    "website:vercel": "VERCEL=1 pnpm --filter website... run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@resolid/config": "^2.0.1",
+    "@types/node": "^20.17.6",
+    "lefthook": "^1.8.2",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": "20.x",
+    "pnpm": "9.x"
+  },
+  "packageManager": "pnpm@9.12.3",
+  "homepage": "https://www.resolid.tech",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huijiewei/react-router-demo.git"
+  },
+  "pnpm": {
+    "overrides": {
+      "minimatch": "^10.0.1",
+      "react": "19.0.0-rc-2ec26bc4-20241111",
+      "react-dom": "19.0.0-rc-2ec26bc4-20241111",
+      "react-is": "19.0.0-rc-2ec26bc4-20241111"
+    }
+  }
+}

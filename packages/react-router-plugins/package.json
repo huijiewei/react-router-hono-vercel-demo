@@ -1,0 +1,58 @@
+{
+  "name": "react-router-plugins",
+  "type": "module",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "files": ["dist"],
+  "scripts": {
+    "check": "biome check --write .",
+    "build": "tsup"
+  },
+  "exports": {
+    "./dev-server": {
+      "import": "./dist/dev-server.js",
+      "types": "./dist/dev-server.d.ts"
+    },
+    "./flex-routes": {
+      "import": "./dist/flex-routes.js",
+      "types": "./dist/flex-routes.d.ts"
+    },
+    "./node-server": {
+      "import": "./dist/node-server.js",
+      "types": "./dist/node-server.d.ts"
+    },
+    "./node-preset": {
+      "import": "./dist/node-preset.js",
+      "types": "./dist/node-preset.d.ts"
+    },
+    "./vercel-server": {
+      "import": "./dist/vercel-server.js",
+      "types": "./dist/vercel-server.d.ts"
+    },
+    "./vercel-preset": {
+      "import": "./dist/vercel-preset.js",
+      "types": "./dist/vercel-preset.d.ts"
+    }
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@hono/vite-dev-server": "^0.17.0",
+    "@react-router/dev": "pre",
+    "@vercel/nft": "^0.27.6",
+    "esbuild": "^0.21.5",
+    "hono": "^4.6.10",
+    "minimatch": "^10.0.1",
+    "react-router": "pre"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "type-fest": "^4.26.1",
+    "vite": "^5.4.11"
+  },
+  "peerDependencies": {
+    "vite": "^5.4.11"
+  }
+}
