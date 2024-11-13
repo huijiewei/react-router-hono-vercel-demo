@@ -76,7 +76,7 @@ export const buildEntry = async (
       treeShaking: true,
       legalComments: "none",
       // 使用构建 API 时，如果启用了所有缩小选项，则所有 process.env.NODE_ENV 表达式都会自动定义为 "production" ，否则为 "development"
-      minify: true,
+      minify: false,
     })
     .catch((error: unknown) => {
       console.error(error);
