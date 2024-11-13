@@ -1,7 +1,7 @@
 import { env } from "node:process";
+import { handle } from "@hono/node-server/vercel";
 import type { Env } from "hono";
 import type { BlankEnv } from "hono/types";
-import { handle } from "hono/vercel";
 import type { ServerBuild } from "react-router";
 import { type HonoServerOptions, createHonoServer } from "../base/hono-server";
 
