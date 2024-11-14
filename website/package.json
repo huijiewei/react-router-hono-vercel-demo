@@ -6,8 +6,8 @@
     "check": "biome check --write .",
     "typegen": "react-router typegen",
     "dev": "vite",
-    "build": "NODE_ENV=production react-router build",
-    "vercel": "NODE_ENV=production VERCEL=1 react-router build",
+    "build": "react-router build",
+    "vercel": "VERCEL=1 react-router build",
     "start": "NODE_ENV=production node ./build/server/server.mjs"
   },
   "dependencies": {
