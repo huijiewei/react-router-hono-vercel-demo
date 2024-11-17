@@ -22,6 +22,7 @@ export default defineConfig(({ command, isSsrBuild }) => {
         appDirectory: appDirectory,
         entryFile: "server.node.ts",
       }),
+      tailwindcss(),
       reactRouter({
         appDirectory: appDirectory,
         presets: [
@@ -36,7 +37,6 @@ export default defineConfig(({ command, isSsrBuild }) => {
               }),
         ],
       }),
-      tailwindcss(),
       tsconfigPaths(),
       !isBuild && viteInspect(),
     ].filter(Boolean),

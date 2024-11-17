@@ -15,8 +15,8 @@
     "@react-router/node": "pre",
     "hono": "^4.6.10",
     "isbot": "^5.1.17",
-    "react": "19.0.0-rc-2ec26bc4-20241111",
-    "react-dom": "19.0.0-rc-2ec26bc4-20241111",
+    "react": "19.0.0-rc.1",
+    "react-dom": "19.0.0-rc.1",
     "react-router": "pre",
     "tailwindcss": "next"
   },
