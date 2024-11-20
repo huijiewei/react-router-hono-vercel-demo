@@ -1,6 +1,6 @@
 import { cp, mkdir, readdir, realpath, rm, writeFile } from "node:fs/promises";
 import { basename, dirname, join, relative } from "node:path";
-import type { BuildManifest, Preset } from "@react-router/dev/vite";
+import type { BuildManifest, Preset } from "@react-router/dev/config";
 import { nodeFileTrace } from "@vercel/nft";
 import { buildEntry } from "../base/build-utils";
 import type { RouteManifest } from "../flex-routes/manifest";

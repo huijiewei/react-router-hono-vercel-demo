@@ -1,10 +1,6 @@
-import { env } from "node:process";
-import { fileURLToPath } from "node:url";
 import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
 import { devServer } from "react-router-plugins/dev-server";
-import { nodePreset } from "react-router-plugins/node-preset";
-import { vercelPreset } from "react-router-plugins/vercel-preset";
 import { defineConfig } from "vite";
 import viteInspect from "vite-plugin-inspect";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -14,8 +10,6 @@ const appDirectory = "src";
 export default defineConfig(({ command, isSsrBuild }) => {
   const isBuild = command == "build";
 
-  const __dirname = fileURLToPath(new URL(".", import.meta.url));
-
   return {
     plugins: [
       devServer({
@@ -23,20 +17,7 @@ export default defineConfig(({ command, isSsrBuild }) => {
         entryFile: "server.node.ts",
       }),
       tailwindcss(),
-      reactRouter({
-        appDirectory: appDirectory,
-        presets: [
-          env.VERCEL == "1"
-            ? vercelPreset({
-                regions: "sin1",
-                copyParentModules: ["@node-rs/bcrypt"],
-                entryFile: "server.vercel.ts",
-              })
-            : nodePreset({
-                entryFile: "server.node.ts",
-              }),
-        ],
-      }),
+      reactRouter(),
       tsconfigPaths(),
       !isBuild && viteInspect(),
     ].filter(Boolean),

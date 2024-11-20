@@ -1,5 +1,5 @@
 import { dirname, join, relative } from "node:path";
-import type { Preset } from "@react-router/dev/vite";
+import type { Preset } from "@react-router/dev/config";
 import { buildEntry } from "../base/build-utils";
 
 export type NodePresetOptions = {
