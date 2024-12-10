@@ -3,7 +3,6 @@ import { basename, dirname, join, relative } from "node:path";
 import type { BuildManifest, Preset } from "@react-router/dev/config";
 import { nodeFileTrace } from "@vercel/nft";
 import { buildEntry } from "../base/build-utils";
-import type { RouteManifest } from "../flex-routes/manifest";
 
 export type VercelPresetOptions = {
   regions: string | string[];
@@ -11,7 +10,9 @@ export type VercelPresetOptions = {
   entryFile?: string;
 };
 
+// noinspection JSUnusedGlobalSymbols
 export const vercelPreset = (options: VercelPresetOptions): Preset => {
+  // noinspection JSUnusedGlobalSymbols
   return {
     name: "resolid-vercel-serverless-preset",
     reactRouterConfig: () => {
@@ -155,7 +156,7 @@ const copyStaticFiles = async (outDir: string, vercelOutDir: string) => {
   await rm(join(vercelStaticDir, ".vite"), { recursive: true, force: true });
 };
 
-const getRoutePathsFromParentId = (routes: RouteManifest, parentId: string | undefined) => {
+const getRoutePathsFromParentId = (routes: BuildManifest["routes"], parentId: string | undefined) => {
   if (parentId == undefined) {
     return [];
   }

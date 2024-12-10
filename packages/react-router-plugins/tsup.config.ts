@@ -15,7 +15,6 @@ export default defineConfig([
     ...baseConfig,
     entry: {
       "dev-server": "src/dev-server/index.ts",
-      "flex-routes": "src/flex-routes/index.ts",
     },
   },
   {
